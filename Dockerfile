@@ -1,14 +1,28 @@
+# Stage 1: Build PHP application (based on php:latest)
+FROM php:latest AS builder
+
+WORKDIR /app
+
+# Copy your PHP application code here
+COPY . .
+
+# Install dependencies (replace with your actual commands)
+RUN apt-get update && apt-get install -y php-fpm php-mysqli
+
+# Compile or build your PHP application (replace with your commands)
+RUN composer install
+
+# Stage 2: Create final image (based on nginx:alpine)
 FROM nginx:alpine
 
-COPY index.html /usr/share/nginx/html/index.html
-COPY . /usr/share/nginx/html/
+# Copy the compiled application files from the builder stage
+COPY --from=builder /app/public /usr/share/nginx/html
 
-# Assuming contact form data is processed in PHP
-COPY contact-form-process.php /var/www/html/
-USER 10014
-RUN apk add --no-cache php php-fpm
+# Configure Nginx (replace with your actual configuration)
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+# Start php-fpm and Nginx processes
+CMD ["php-fpm", "-F", "& nginx -g 'daemon off;'"]
 
