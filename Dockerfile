@@ -9,6 +9,7 @@ COPY . .
 # Install the http.server module
 RUN pip install --no-cache-dir http.server
 
+USER 10014
 # Expose the port 80
 EXPOSE 80
 
