@@ -6,12 +6,9 @@ WORKDIR /app
 # Copy the entire directory into the container
 COPY . .
 
-# Install the http.server module
-RUN pip install --no-cache-dir http.server
-
-USER 10014
 # Expose the port 80
 EXPOSE 80
 
+USER 10012
 # Run the command to start the web server
-CMD ["http.server", "80"]
+CMD ["python", "-m", "http.server", "80"]
