@@ -13,7 +13,7 @@ ENV APACHE_RUN_GROUP www-data
 
 # Option 1: Set DefaultRuntimeDir directly (if not using APACHE_RUN_DIR)
 RUN echo "DefaultRuntimeDir /var/run/apache2" >> /etc/apache2/apache2.conf
-RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+RUN echo "ServerName localhost:8080" >> /etc/apache2/apache2.conf
 # Option 2 (Uncomment if using APACHE_RUN_DIR):
 #  Ensure the corresponding line in `/etc/apache2/apache2.conf` is set correctly (e.g., SetEnv APACHE_RUN_DIR /path/to/directory)
 
