@@ -3,6 +3,8 @@ FROM php:apache
 
 # Create directory for logs (optional)
 RUN mkdir -p /var/run/apache2
+ENV APACHE_RUN_DIR /var/lib/apache/runtime 
+RUN mkdir -p ${APACHE_RUN_DIR}
 
 # Set environment variables (replace with your desired values)
 ENV APACHE_LOG_DIR /var/log/apache2
