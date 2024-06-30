@@ -17,5 +17,5 @@ USER 10014
 EXPOSE 80
 
 # Set the entrypoint to serve the index.html file
-ENTRYPOINT ["apache2", "-f", "/etc/apache2/apache2.conf", "-G"]
+ENTRYPOINT ["apache2", "-f", "/etc/apache2/apache2.conf"]
 
