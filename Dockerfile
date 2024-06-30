@@ -14,7 +14,8 @@ RUN a2enmod rewrite
 
 USER 10014
 # Configure Apache to use index.html as the default index page
-RUN echo "DirectoryIndex index.html" >> /etc/apache2/apache2.conf
+RUN chown 10014:10014 /etc/apache2/apache2.conf
+RUN sed -i -e '$i\DirectoryIndex index.html' /etc/apache2/apache2.conf
 
 # Restart Apache to apply changes
 RUN service apache2 restart
