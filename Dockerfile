@@ -1,6 +1,5 @@
 # Use an official Node.js image as the base image
-FROM node:14
-
+FROM debian:10.13
 # Set the working directory to /app
 WORKDIR /app
 
