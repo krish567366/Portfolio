@@ -19,7 +19,7 @@ FROM nginx:alpine
 COPY --from=builder /app/public /usr/share/nginx/html
 
 # Configure Nginx (replace with your actual configuration)
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+USER 10014
 
 EXPOSE 80
 
