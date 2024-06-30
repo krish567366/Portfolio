@@ -2,23 +2,23 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
+alt = Krishna Bajpai
+Krishna Bajpai
 Web developer
 
 Show Contacts
 
 Email
-richard@example.com
+gm.officeofkb@gmail.com
 
 Phone
-+1 (213) 352-2795
++91 9118425114
 
 Birthday
-June 23, 1982
+June 24, 2006.
 
 Location
-Sacramento, California, USA
+Kanpur, UP, India. 208014
 
 # navbar
 
