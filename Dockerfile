@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN RUN apt-get update && apt-get install -y npm 
 
 USER 10014
 
