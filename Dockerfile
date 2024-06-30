@@ -25,7 +25,7 @@ USER $APACHE_RUN_USER  # Use the environment variable for consistency
 
 USER 10012
 # Expose port 80
-EXPOSE 3000
+EXPOSE 8080
 
 # Use CMD to specify the startup command (fixed typo)
 CMD ["apache2", "-f", "/etc/apache2/apache2.conf"]
