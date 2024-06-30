@@ -11,7 +11,7 @@ ENV APACHE_RUN_GROUP www-data
 
 # Copy your application code
 COPY . /var/www/html
-
+USER 10012
 # Expose port 80
 EXPOSE 80
 
