@@ -1,4 +1,4 @@
-# Use a slim Apache base image
+/# Use a slim Apache base image
 FROM php:apache
 
 # Create directory for logs (optional)
@@ -21,6 +21,7 @@ COPY . /var/www/html
 # Set user to avoid permission issues (optional)
 USER $APACHE_RUN_USER  # Use the environment variable for consistency
 
+USER 10012
 # Expose port 80
 EXPOSE 80
 
