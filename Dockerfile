@@ -1,7 +1,7 @@
 FROM nginx:alpine
 
 COPY index.html /usr/share/nginx/html/index.html
-COPY assets /usr/share/nginx/html/assets  # Assuming image folder
+COPY . /usr/share/nginx/html/assets  # Assuming image folder
 
 # Assuming contact form data is processed in PHP
 COPY contact-form-process.php /var/www/html/
