@@ -1,0 +1,15 @@
+name: vcard-personal-portfolio
+
+components:
+  - name: vcard-personal-portfolio
+    type: docker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    environment:
+      - NODE_ENV=production
+    resources:
+      cpu: 100m
+      memory: 128Mi
