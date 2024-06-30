@@ -1,5 +1,5 @@
 # Use a slim Apache base image
-FROM php:apache-slim
+FROM php:apache
 
 # Create directory for logs (optional)
 RUN mkdir -p /var/log/apache2
