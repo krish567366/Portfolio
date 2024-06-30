@@ -1,4 +1,4 @@
-/# Use a slim Apache base image
+# Use a slim Apache base image
 FROM php:apache
 
 # Create directory for logs (optional)
