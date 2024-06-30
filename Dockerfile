@@ -4,7 +4,7 @@ FROM php:7.4-apache
 WORKDIR /app
 
 # Copy the entire directory into the container
-COPY..
+COPY . .
 
 # Expose the port 80
 EXPOSE 80
